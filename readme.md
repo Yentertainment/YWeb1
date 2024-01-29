@@ -2,14 +2,14 @@
 
 ## Front-end
 
-React JS (+ NextUI)
-Expo
-NativeScript
-React Three Fiber
-Tailwind CSS (for styling)
-React Redux (for state management)
-Type Script (for type safety)
-Next.js (+ NextUI)
+1. React JS (+ NextUI)
+2. Expo
+3. NativeScript
+4. React Three Fiber
+5. Tailwind CSS (for styling)
+6. React Redux (for state management)
+7. Type Script (for type safety)
+8. Next.js (+ NextUI)
 
 ## APIs
 
