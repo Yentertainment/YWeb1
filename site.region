@@ -1,0 +1,172 @@
+<!doctype html>
+<html amp class="touch-styles">
+  <head>
+    <meta charset="utf-8">
+    <script async src="https://cdn.ampproject.org/v0.js"></script>
+    <link rel="canonical" href="https://www.yentertainmentltd.com" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="London, United Kingdom, England, Libertine, Cafe de Paris, Tonteria, Mahiki, Y Team, Y Entertainment Ltd, Y Entertainment">
+    <meta http-equiv="content-language" content="en-us" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    {.if template.mobileStylesEnabled}
+    {.end}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="London, United Kingdom, England, Libertine, Cafe de Paris, Tonteria, Mahiki, Y Team, Y Entertainment Ltd, Y Entertainment">
+    <meta http-equiv="content-language" content="en-us" />
+    <script async="" src="https://www.google-analytics.com/analytics.js"></script>
+    <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+
+    {squarespace-headers}
+    <script>/* Must be below squarespace-headers */(function(){var touchTest="ontouchstart"in window||navigator.msMaxTouchPoints;if(!touchTest){with(document.documentElement){className=className.replace(new RegExp("touch-styles"),"")}}})()</script>
+  </head>
+  {.if template.mobileStylesEnabled}{.or}<!-- Mobile Styles Disabled -->{.end}
+  <body id="{squarespace.page-id}" class="{squarespace.page-classes}{.section website}{.if logoImageUrl} logo-image{.end}{.end}{.section collection}{.equal? typeName "index"}{.section collections}{.section 0}{.equal? typeName "gallery"} has-banner-image{.end}{.equal? typeName "page"}{.background-source-video?} has-banner-image index-page{.or}{.main-image?} has-banner-image index-page{.end}{.end}{.end}{.end}{.end}{.or}{.background-source-video?} has-banner-image general-page{.or}{.main-image?} has-banner-image general-page{.end}{.end}{.end}{.end}{.if authorFilter} filter-author{.end}{.if tagFilter} filter-tag{.end}{.if categoryFilter} filter-category{.end}{.section collection} collection-{urlId|slugify}{.end}">
+
+    <div id="site">
+
+      <input type="checkbox" name="mobile-nav-toggle" id="mobileNavToggle" class="mobile-nav-toggle-box hidden" />
+
+      <div id="overlayNav">
+        <squarespace:navigation navigationId="mainNav" template="mobile-navigation" />
+      </div>
+
+
+      <header id="header" role="banner">
+        <div class="header-inner">
+          {.section website}<div id="{.if logoImageUrl}logoWrapper{.or}siteTitleWrapper{.end}" class="title-logo-wrapper" data-content-field="site-title">
+            {.section logoImageUrl}
+              <h1 id="logoImage" class="tmpl-loading logo-image"><a href="/"><img src="{logoImageUrl}?format=1500w" alt="{siteTitle}" /></a></h1>
+            {.or}
+              <h1 id="siteTitle" class="site-title tmpl-loading"><a href="/">{siteTitle}</a></h1>
+            {.end}
+          </div>{.end}<!-- comment the linebreak between these two elements because science
+          --><label for="mobileNavToggle" class="mobile-nav-toggle-label show-on-scroll-mobile"><div class="top-bar"></div><div class="middle-bar"></div><div class="bottom-bar"></div></label><!-- comment the linebreak between these two elements because science
+          --><div id="headerNav" class="tmpl-loading" ><squarespace:navigation navigationId="mainNav" template="navigation" /></div>
+        </div>
+      </header>
+
+      <div id="siteWrapper" class="clearfix">
+
+        <!-- Banner -->
+        {.if item}
+          <!-- nothing to see here, move along -->
+        {.or}
+          {.section collection}
+            {.equal? typeName "index"}
+              <!-- nothing to see here, move along -->
+            {.or}
+              {.background-source-video?}
+                <div class="banner-thumbnail-wrapper">
+                  <div class="color-overlay"></div>
+                  <figure id="thumbnail" class="loading content-fill">
+                    {@|apply sqs-video-background.block}
+                  </figure>
+                  <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
+                    <h1 class="page-title">{collection.title}</h1>
+                    {.section description}<div class="page-description">{@}</div>{.end}
+                  </div>
+                </div>
+              {.or}
+                {.if mainImage}
+                  <div class="banner-thumbnail-wrapper">
+                  {.section mainImage}
+                    <div class="color-overlay"></div>
+                    <figure id="thumbnail" class="loading content-fill"><img {@|image-meta} data-load="false" /></figure>
+                  {.end}
+                    <div class="desc-wrapper tmpl-loading" data-collection-id="{id}">
+                      <h1 class="page-title">{collection.title}</h1>
+                      {.section description}<div class="page-description">{@}</div>{.end}
+                    </div>
+                  </div>
+                {.end}
+              {.end}
+            {.end}
+          {.end}
+        {.end}
+
+        {.section tagFilter}
+          <p class="filter-heading filter-by-tag">
+            <a href="{collection.fullUrl}"><span>{@|safe}</span></a>
+          </p>
+        {.end}
+        {.if authorFilter}
+          <p class="filter-heading filter-by-author">
+            <a href="{collection.fullUrl}"><span>{author.displayName}</span></a>
+          </p>
+          {.section author}
+            <div class="author-profile">
+              {.if avatarAssetUrl}<div class="author-profile-image"><img src="http://static.squarespace.com/static/w/gbl/{avatarId}/?format=300w" /></div>{.end}<div class="author-profile-content">
+                <h3 class="author-profile-name"><a href="{collection.fullUrl}?author={authorId}">{displayName}</a></h3>
+                {.section location}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}<p class="author-profile-location">{.end}{.if addressTitle}{addressTitle}{.end}{.if addressLine1}{.if addressTitle}, {.end}{addressLine1}{.end}{.if addressLine2}{.if addressTitle || addressLine1}, {.or}{.end}{addressLine2}{.end}{.if addressCountry}{.if addressTitle || addressLine1 || addressLine2}, {.end}{addressCountry}{.end}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}</p>{.end}{.end}
+                <p class="author-profile-bio">{bio}</p>
+              </div>
+            </div>
+          {.end}
+        {.end}
+
+        <main id="page" role="main">
+          <div id="content" class="main-content" data-content-field="main-content" data-collection-id="{collection.id}" {.equal? collection.typeName "index"}{.or}data-edit-main-image="Banner"{.end}>
+
+            {.section collection}
+              {.equal? typeName "products"}<!-- PRODUCT CATEGORY NAV -->{.section categories}
+              <div id="categoryNav">
+                <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
+                <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
+                <nav class="category-nav">
+                  <ul class="category-nav-links">
+                    <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
+                    <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li><!-- comment the linebreak between these two elements because science
+          -->{.repeated section @}<li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li><!-- comment the linebreak between these two elements because science
+          -->{.end}
+                  </ul>
+                </nav>
+              </div>
+              {.end}{.end}
+
+              {.equal? typeName "blog"}{.if tagFilter}{.or}{.if authorFilter}{.or}<!-- BLOG CATEGORY NAV -->{.section categories}
+              <div id="categoryNav">
+                <input type="checkbox" name="category-nav-toggle" id="categoryNavToggle" class="category-nav-toggle hidden" />
+                <label for="categoryNavToggle" class="category-nav-toggle-label" onclick></label>
+                <nav class="category-nav">
+                  <ul class="category-nav-links">
+                    <li class="filter"><a>Filter{.if categoryFilter}: {categoryFilter}{.end}</a></li>
+                    <li{.if categoryFilter}{.or} class="active-link all"{.end}><a href="{fullUrl}">All</a></li><!-- comment the linebreak between these two elements because science
+          -->{.repeated section @}<li{.equal? categoryFilter @} class="active-link"{.end}><a href="{fullUrl}?category={@|url-encode}">{@}</a></li><!-- comment the linebreak between these two elements because science
+          -->{.end}
+                  </ul>
+                </nav>
+              </div>
+              {.end}{.end}{.end}{.end}
+            {.end}
+
+           {squarespace.main-content}
+          </div>
+        </main>
+
+        <div id="preFooter">
+          {@|apply pre-footer-with-custom.block}
+        </div>
+
+        <footer id="footer" role="contentinfo">
+          <div class="footer-inner">
+            <div class="nav-wrapper back-to-top-nav"><nav><div class="back-to-top"><a href="#header">Back to Top</a></div></nav></div>
+            <squarespace:navigation navigationId="secondaryNav" template="secondary-navigation" />
+            {.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}<div id="siteInfo">{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}<div id="siteInfo">{.end}{.end}{.section website}{.section location}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}<span class="site-address">{.end}{.if addressTitle}{addressTitle}{.end}{.if addressLine1}{.if addressTitle}, {.end}{addressLine1}{.end}{.if addressLine2}{.if addressTitle || addressLine1}, {.or}{.end}{addressLine2}{.end}{.if addressCountry}{.if addressTitle || addressLine1 || addressLine2}, {.end}{addressCountry}{.end}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}</span>{.end}{.end}{.end}{.section websiteSettings}{.if contactPhoneNumber}<span rel="tel" class="site-phone">{contactPhoneNumber}</span>{.end}{.if contactEmail}<a href="mailto:{contactEmail}" class="site-email">{contactEmail}</a>{.end}{.end}{.if website.location.addressTitle || website.location.addressLine1 || website.location.addressLine2 || website.location.addressCountry}</div>{.or}{.if websiteSettings.contactPhoneNumber || websiteSettings.contactEmail}</div>{.end}{.end}
+            <squarespace:block-field id="footerBlocks" columns="12" label="Footer Content" />
+          </div>
+        </footer>
+
+        {.if showCart}
+        <div class="{squarespace.cart-classes} custom-cart{.section shoppingCart}{.section entries}{.or} empty{.end}{.end}">
+          <a href="{shoppingCart|cart-url}" class="custom-cart-button">Cart ({shoppingCart|cart-quantity})</a>
+        </div>
+        {.end}
+
+      </div>
+    </div>
+
+    <squarespace:script src="site-bundle.js" combo="false" />
+
+
+  </body>
+</html>

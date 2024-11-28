@@ -1,0 +1,459 @@
+
+/* Pacific TWEAKS
+-------------------------------------------------*/
+
+
+/* Header */
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Header Background Color", "label" : "Background Color", "target" : "#header" }
+@headerBgColor: #1b1b1b;
+
+// tweak: { "category" : "Site Header", "type" : "value", "title" : "Header Padding", "label" : "Padding", "min" : 10, "max" : 50, "step" : 1, "target" : "#header", "js" : true }
+@headerPadding: 30px;
+
+// tweak: { "category" : "Site Header", "type" : "font", "title" : "Site Title Font", "target" : "#siteTitle", "showOnlyWhenPresent" : "#siteTitle", "loadAllVariants" : true }
+.site-title-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 600;
+  font-style: normal;
+  font-size: 21px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Site Title Color", "target" : "#siteTitle", "showOnlyWhenPresent" : "#siteTitle" }
+@siteTitleColor: #fff;
+
+// tweak: { "category" : "Site Header", "type" : "value", "title" : "Logo Width", "min" : 40, "max" : 300, "step" : 1, "target" : "#logoImage", "showOnlyWhenPresent" : "#logoImage", "js" : true }
+@logoWidth: 64px;
+
+// tweak: { "category" : "Site Header", "type" : "value", "title" : "Site Title Container Width", "min" : 40, "max" : 500, "step" : 5, "target" : "#siteTitle", "showOnlyWhenPresent" : "#siteTitle", "js" : true }
+@siteTitleContainerWidth: 255px;
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Cart Button Background Color", "target" : ".custom-cart", "showOnlyWhenPresent" : ".custom-cart:not(.empty)" }
+@cartBgColor: #ff384f;
+
+// tweak: { "category" : "Site Header", "type" : "color", "title" : "Cart Button Font Color", "target" : ".custom-cart", "showOnlyWhenPresent" : ".custom-cart:not(.empty)" }
+@cartFontColor: #fff;
+
+// tweak: { "category" : "Site Header", "type" : "checkbox", "title" : "Transparent Header", "label" : "Transparent on Banner Images", "active" : true, "target" : "#header" }
+
+
+/* Navigation */
+
+// tweak: { "category" : "Site Navigation", "type" : "font", "title" : "Nav Link Font", "label" : "Link Font", "target" : "#headerNav, .mobile-nav-toggle-label" }
+.nav-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+// tweak: { "category" : "Site Navigation", "type" : "color", "title" : "Nav Link Color", "label" : "Link Color", "target" : "#headerNav, .mobile-nav-toggle-label" }
+@navColor: #eee;
+
+// tweak: { "category" : "Site Navigation", "type" : "color", "title" : "Nav Link (Active)", "label" : "Link Active Color", "target" : "#headerNav, .mobile-nav-toggle-label" }
+@navActiveColor: #fff;
+
+// tweak: { "category" : "Site Navigation", "type" : "checkbox", "title" : "Always Use Overlay Nav", "active" : "false", "target" : "#headerNav, .mobile-nav-toggle-label" }
+
+// tweak: { "category" : "Site Navigation", "type" : "checkbox", "title" : "Expand Homepage Index Links", "active" : "true", "target" : "#headerNav, .mobile-nav-toggle-label", "showOnlyWhenPresent" : ".index.home" }
+
+// tweak: { "category" : "Site Navigation", "type" : "dropdown", "title" : "Homepage Index Nav", "label" : "Index Scroll Nav", "options" : [ "None", "Show On Scroll" ], "default" : "Show On Scroll", "showOnlyWhenPresent" : ".collection-type-index.homepage", "js" : true }
+
+
+/* Page Banner */
+
+// tweak: { "category" : "Page Banner", "type" : "color", "title" : "Page Banner Overlay Color", "label" : "Overlay Color", "target" : ".banner-thumbnail-wrapper", "showOnlyWhenPresent" : ".banner-thumbnail-wrapper" }
+@bannerOverlayColor: rgba(0,0,0,0.7);
+
+// tweak: { "category" : "Page Banner", "type" : "value", "title" : "Page Overlay Padding", "label" : "Padding", "min" : 100, "max" : 300, "step" : 5, "target" : ".banner-thumbnail-wrapper", "showOnlyWhenPresent" : ".banner-thumbnail-wrapper", "property" : ["padding-top", "padding-bottom"] }
+@bannerOverlayPadding: 220px;
+
+// tweak: { "category" : "Page Banner", "type" : "checkbox", "title" : "Show Page Title", "active" : true, "target" : ".banner-thumbnail-wrapper .page-title" }
+
+// tweak: { "category" : "Page Banner", "type" : "font", "title" : "Page Title Font", "target" : ".banner-thumbnail-wrapper .page-title", "showOnlyWhenPresent" : ".show-page-title .banner-thumbnail-wrapper .page-title" }
+.page-title-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.35em;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Page Banner", "type" : "color", "title" : "Overlay Page Title Color", "label" : "Title Font Color", "target" : ".banner-thumbnail-wrapper .page-title", "showOnlyWhenPresent" : ".show-page-title .banner-thumbnail-wrapper .page-title" }
+@overlayPageTitleColor: #fff;
+
+// tweak: { "category" : "Page Banner", "type" :"font", "title" : "Page Description Font", "target" : ".banner-thumbnail-wrapper .page-description", "showOnlyWhenPresent" : ".banner-thumbnail-wrapper .page-description" }
+.page-description-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Page Banner", "type" : "color", "title" : "Overlay Page Desc Color", "label" : "Description Font Color", "target" : ".banner-thumbnail-wrapper .page-description", "showOnlyWhenPresent" : ".banner-thumbnail-wrapper .page-description" }
+@overlayPageDescColor: #f9b963;
+
+
+/* Main Content */
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Page Background", "label" : "Background Color", "target" : "#siteWrapper" }
+@pageBgColor: #fff;
+
+// tweak: { "category" : "Main Content", "type" : "value", "title" : "Page Padding", "label" : "Page Padding", "min" : 20, "max" : 300, "step" : 5, "target" : "#page", "showOnlyWhenPresent" : "#page", "property" : ["padding-top", "padding-bottom"] }
+@pagePadding: 100px;
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Page Text Font", "label" : "Text Font", "target" : ".main-content .sqs-layout p, .page-content.has-main-media p", "loadAllVariants" : true }
+.body-font {
+  font-family: "Kameron", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  letter-spacing: 0px;
+  line-height: 1.6em;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Page Text Color", "label" : "Text Color", "target" : ".main-content .sqs-layout p" }
+@pageTextColor: #666;
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Page Link Color", "label" : "Link Color", "target" : ".main-content .sqs-layout a, .main-content .entry-more-link a" }
+@pageLinkColor: #1b1b1b;
+
+// tweak: { "category" : "Main Content", "type" :"font", "title" : "Page Meta Font", "label" : "Meta Font", "target" : ".meta-above-title, .meta-below-title, .engagement, .summary-metadata, .event-meta"}
+.meta-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Page Meta Color", "label" : "Meta Color", "target" : ".meta-above-title, .meta-below-title, .enagement, .summary-metadata, .event-meta" }
+@pageMetaColor: #999;
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Heading 1 Font", "target" : ".main-content h1, .page-content h1, .page-content.has-main-media h1" }
+.heading1-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 1.35em;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Heading 1 Color", "target" : ".main-content h1, .page-content h1" }
+@heading1Color: #111;
+
+// tweak: { "category" : "Main Content", "type" :"font", "title" : "Heading 2 Font", "target" : ".main-content h2, .page-content h2, .page-content.has-main-media h2" }
+.heading2-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 37px;
+  line-height: 1.3em;
+  letter-spacing: 1px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Heading 2 Color", "target" : ".main-content h2, .page-content h2 " }
+@heading2Color: #333;
+
+// tweak: { "category" : "Main Content", "type" :"font", "title" : "Heading 3 Font", "target" : ".main-content h3, .page-content h3, .page-content.has-main-media h3, .menu-block .menu-section-title" }
+.heading3-font {
+  font-family: "Kameron", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 21px;
+  line-height: 1.2em;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Heading 3 Color", "target" : ".main-content h3, .page-content h3, .menu-block .menu-section-title" }
+@heading3Color: #666;
+
+// tweak: { "category" : "Main Content", "type" : "font", "title" : "Quote Font", "target" : ".main-content .quote-block, .page-content.has-main-media .quote-block", "showOnlyWhenPresent" : ".quote-block" }
+.quote-font {
+  font-family: "Kameron", Georgia, serif;
+  font-weight: 400;
+  font-style: italic;
+  font-size: 27px;
+  line-height: 1.35em;
+  letter-spacing: 0px;
+}
+
+// tweak: { "category" : "Main Content", "type" : "color", "title" : "Quote Color", "target" : ".main-content .quote-block", "showOnlyWhenPresent" : ".quote-block" }
+@quoteColor: #aaa;
+
+
+/* Index */
+
+// tweak: { "category" : "Index", "type" : "dropdown", "title" : "Index Section Separation", "label" : "Section Separator", "options" : [ "Border", "Alternating Background" ], "default" : "Alternating Background", "showOnlyWhenPresent" : ".index-section.no-main-image.page", "target" : ".index-section.no-main-image.page" }
+
+// tweak: { "category" : "Index", "type" : "color", "title" : "Index Alternate Bg Color", "label" : "Alternating Color", "target" : ".index-section.no-main-image.page", "showOnlyWhenPresent" : ".index-section-separation-alternating-background .index-section.no-main-image.page" }
+@indexAltBgColor: #eee;
+
+// tweak: { "category" : "Index", "type" : "color", "title" : "Index Border Color", "label" : "Border Color", "target" : ".index-section.no-main-image.page", "showOnlyWhenPresent" : ".index-section-separation-border .index-section.no-main-image.page" }
+@indexBorderColor: #ddd;
+
+// tweak: { "category" : "Index", "type" : "value", "title" : "Index Page Padding", "label" : "Page Padding", "min" : 20, "max" : 300, "step" : 5, "target" : ".index-section.no-main-image.page", "showOnlyWhenPresent" : ".index-section.no-main-image.page", "property" : ["padding-top", "padding-bottom"] }
+@indexPagePadding: 100px;
+
+
+
+/* Index Overlay */
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Color", "label" : "Color", "target" : ".index-section-wrapper.has-main-media", "showOnlyWhenPresent" : ".index-section-wrapper.has-main-media" }
+@overlayColor: rgba(0,0,0,0.7);
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Padding", "label" : "Padding", "min" : 100, "max" : 300, "step" : 5, "target" : ".page-content.has-main-media, .album-content.has-main-media", "showOnlyWhenPresent" : ".page-content.has-main-media, .album-content.has-main-media", "property" : ["padding-top", "padding-bottom"] }
+@overlayPadding: 220px;
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Text Size", "label" : "Text Size", "min" : 8, "max" : 48, "step" : 1, "target" : ".page-content.has-main-media p", "showOnlyWhenPresent" : ".page-content.has-main-media p" }
+@overlayTextSize: 16px;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Text Color", "label" : "Text Color", "target" : ".page-content.has-main-media p, .album-content.has-main-media .album-description, .album-content.has-main-media .tracks", "showOnlyWhenPresent" : ".index-section-wrapper.has-main-media" }
+@overlayTextColor: #eee;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Link Color", "label" : "Link Color", "target" : ".design-slideshow .slide.sqs-active-slide .description a, .page-content.has-main-media p a, .album-content.has-main-media .album-description a", "showOnlyWhenPresent" : ".index-section-wrapper.has-main-media" }
+@overlayLinkColor: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Heading 1 Size", "label" : "Heading 1 Size", "min" : 12, "max" : 96, "step" : 1, "target" : ".page-content.has-main-media h1", "showOnlyWhenPresent" : ".page-content.has-main-media h1" }
+@overlayHeading1Size: 48px;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Heading 1 Color", "label" : "Heading 1 Color", "target" : ".page-content.has-main-media h1", "showOnlyWhenPresent" : ".page-content.has-main-media h1" }
+@overlayHeading1Color: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Heading 2 Size", "label" : "Heading 2 Size", "min" : 12, "max" : 96, "step" : 1, "target" : ".page-content.has-main-media h2", "showOnlyWhenPresent" : ".page-content.has-main-media h2" }
+@overlayHeading2Size: 24px;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Heading 2 Color", "label" : "Heading 2 Color", "target" : ".page-content.has-main-media h2", "showOnlyWhenPresent" : ".page-content.has-main-media h2" }
+@overlayHeading2Color: #f9b963;
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Heading 3 Size", "label" : "Heading 3 Size", "min" : 12, "max" : 96, "step" : 1, "target" : ".page-content.has-main-media h3, .album-content.has-main-media .album-title", "showOnlyWhenPresent" : ".page-content.has-main-media h3, .album-content.has-main-media .album-title" }
+@overlayHeading3Size: 18px;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Heading 3 Color", "label" : "Heading 3 Color", "target" : ".page-content.has-main-media h3, .album-content.has-main-media .album-title", "showOnlyWhenPresent" : ".page-content.has-main-media h3, .album-content.has-main-media .album-title" }
+@overlayHeading3Color: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "value", "title" : "Overlay Quote Size", "label" : "Quote Size", "min" : 12, "max" : 96, "step" : 1, "target" : ".page-content.has-main-media .quote-block", "showOnlyWhenPresent" : ".page-content.has-main-media .quote-block" }
+@overlayQuoteSize: 27px;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Overlay Quote Color", "label" : "Quote Color", "target" : ".page-content.has-main-media .quote-block", "showOnlyWhenPresent" : ".page-content.has-main-media .quote-block" }
+@overlayQuoteColor: #aaa;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Large Btn Color", "label" : "Large Button Color", "target" : ".page-content.has-main-media .sqs-block-button-element--large, .sqs-block-button-element--large", "showOnlyWhenPresent" : ".page-content.has-main-media .sqs-block-button-element--large" }
+@overlayLgBtnColor: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Large Btn Text Color", "label" : "Large Button Text Color", "target" : ".page-content.has-main-media .sqs-block-button-element--large, .sqs-block-button-element--large", "showOnlyWhenPresent" : ".collection-type-index:not(.large-button-style-outline) .page-content.has-main-media .sqs-block-button-element--large" }
+@overlayLgBtnTextColor: #1b1b1b;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Medium Btn Color", "label" : "Medium Button Color", "target" : ".page-content.has-main-media .sqs-block-button-element--medium, .sqs-block-button-element--medium", "showOnlyWhenPresent" : ".page-content.has-main-media .sqs-block-button-element--medium" }
+@overlayMdBtnColor: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Medium Btn Text Color", "label" : "Medium Button Text Color", "target" : ".page-content.has-main-media .sqs-block-button-element--medium, .sqs-block-button-element--medium", "showOnlyWhenPresent" : ".collection-type-index:not(.medium-button-style-outline) .page-content.has-main-media .sqs-block-button-element--medium" }
+@overlayMdBtnTextColor: #1b1b1b;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Small Btn Color", "label" : "Small Button Color", "target" : ".page-content.has-main-media .sqs-block-button-element--small, .sqs-block-button-element--small", "showOnlyWhenPresent" : ".page-content.has-main-media .sqs-block-button-element--small" }
+@overlaySmBtnColor: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Small Btn Text Color", "label" : "Small Button Text Color", "target" : ".page-content.has-main-media .sqs-block-button-element--small, .sqs-block-button-element--small", "showOnlyWhenPresent" : ".collection-type-index:not(.small-button-style-outline) .page-content.has-main-media .sqs-block-button-element--small" }
+@overlaySmBtnTextColor: #1b1b1b;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Form Btn Color", "label" : "Form/Donate Button Color", "target" : ".sqs-editable-button, .sqs-editable-button-color", "showOnlyWhenPresent" : "body:not(.button-style-default) .page-content.has-main-media .sqs-block-form" }
+@overlayFormBtnColor: #fff;
+
+// tweak: { "category" : "Index Overlay", "type" : "color", "title" : "Index Overlay Form Btn Text Color", "label" : "Form/Donate Button Text Color", "target" : ".sqs-editable-button, .sqs-editable-button-color", "showOnlyWhenPresent" : "body:not(.button-style-outline):not(.button-style-default) .page-content.has-main-media .sqs-block-form" }
+@overlayFormBtnTextColor: #1b1b1b;
+
+
+/* Index Gallery */
+
+// tweak: { "category" : "Index Gallery", "title" : "Design", "type" : "dropdown", "options" : [ "Slideshow", "Grid" ], "default" : "Slideshow", "target": ".design-slideshow .gallery-wrapper .sqs-active-slide .slide, .design-grid .gallery-wrapper .slide, .design-grid .gallery-wrapper .slide-meta", "showOnlyWhenPresent" : ".collection-type-index .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "title" : "Grid Aspect Ratio", "type" : "dropdown", "options" : [ "1:1 (Square)", "4:3 (Landscape)", "3:4 (Portrait)", "16:9 (Widescreen)" ], "default" : "1:1 (Square)", "target": ".design-grid .gallery-wrapper .slide, .design-grid .gallery-wrapper .slide-meta", "showOnlyWhenPresent" : ".design-grid .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "title" : "Grid Max Columns", "type" : "dropdown", "options" : ["Two", "Three", "Four", "Five"], "default" : "Four", "target": ".design-grid .gallery-wrapper .slide, .design-grid .gallery-wrapper .slide-meta", "property": "width", "showOnlyWhenPresent" : ".design-grid .gallery-wrapper" }
+
+// tweak: { "category" : "Index Gallery", "title" : "Slideshow Aspect Ratio", "type" : "dropdown", "options" : [ "Fullscreen", "Auto", "4:3 (Landscape)", "16:9 (Widescreen)", "2.40:1 (Cinema)" ], "default" : "Auto", "target": ".design-slideshow .gallery-wrapper", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "title" : "Slideshow Transition", "type" : "dropdown", "options" : [ "Fade", "Scroll" ], "target": ".design-slideshow .gallery-wrapper", "default" : "Fade", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "title" : "Slideshow Autoplay", "type" : "checkbox", "default" : false, "target": ".design-slideshow .gallery-wrapper", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "type" : "color", "title" : "Gallery Overlay Color", "target" : ".design-slideshow .gallery-wrapper .sqs-active-slide .slide, .design-grid .gallery-wrapper .slide-meta", "showOnlyWhenPresent" : ".collection-type-index .gallery-wrapper, .collection-type-index.design-slideshow .gallery-wrapper" }
+@galleryOverlayColor: rgba(0,0,0,0.7);
+
+// tweak: { "category" : "Index Gallery", "type" :"font", "title" : "Gallery Title Font", "target" : ".design-slideshow .gallery-wrapper .sqs-active-slide .title, .design-grid .gallery-wrapper .slide-meta", "showOnlyWhenPresent" : ".collection-type-index .gallery-wrapper .title" }
+.gallery-title-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1.2em;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+// tweak: { "category" : "Index Gallery", "type" : "color", "title" : "Gallery Title Color", "target" : ".design-slideshow .gallery-wrapper .sqs-active-slide .title, .design-grid .gallery-wrapper .slide-meta", "showOnlyWhenPresent" : ".collection-type-index .gallery-wrapper .title" }
+@overlayTitleColor: #f9b963;
+
+// tweak: { "category" : "Index Gallery", "type" : "font", "title" : "Gallery Description Font", "target" : ".design-slideshow .gallery-wrapper .sqs-active-slide .description", "showOnlyWhenPresent" : ".collection-type-index.design-slideshow .gallery-wrapper .description" }
+.gallery-description-font {
+  font-family: "Kameron", Georgia, serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.6em;
+  letter-spacing: 0px;
+  text-transform: none;
+}
+
+// tweak: { "category" : "Index Gallery", "title" : "Gallery Description Color", "type" : "color", "target" : ".design-slideshow .gallery-wrapper .sqs-active-slide .description", "showOnlyWhenPresent" : ".collection-type-index.design-slideshow .gallery-wrapper .description" }
+@overlayDescColor: #fff;
+
+// tweak: { "category" : "Index Gallery", "title" : "Gallery Controls", "type" : "dropdown", "options" : [ "Arrows", "Circles", "Both", "None" ], "default" : "Circles", "target" : ".design-slideshow .circles, .design-slideshow .arrow", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper", "js" : true }
+
+// tweak: { "category" : "Index Gallery", "title" : "Gallery Controls Color", "type" : "dropdown", "options" : [ "Light", "Dark" ], "default" : "Light", "target" : ".design-slideshow:not(.gallery-controls-none) .index-gallery .gallery-nav", "showOnlyWhenPresent" : ".design-slideshow:not(.gallery-controls-none) .gallery-wrapper" }
+
+// tweak: { "category" : "Index Gallery", "title" : "Gallery Text Toggle", "label" : "Gallery Overlay Toggle", "type" : "checkbox", "active" : true, "target": ".design-slideshow .gallery-wrapper .hide-meta-toggle", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper" }
+
+//OFFtweak: { "category" : "Index Gallery", "title" : "Index Gallery Navigation Color", "type" : "color", "target" : ".design-slideshow .index-gallery .arrow, .design-slideshow .index-gallery .circles", "showOnlyWhenPresent" : ".design-slideshow .gallery-wrapper", "js" : true }
+@indexGalleryNavColor: @overlayTextColor;
+
+
+/* Blog */
+
+// tweak: { "type" : "dropdown", "title" : "Meta Priority", "options" : [ "Date", "Category", "Author", "None" ], "default" : "Date", "category" : "Blog", "target" : ".collection-type-blog #page", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+// tweak: { "type" : "checkbox", "title" : "Hide Entry Author", "active" : true, "category" : "Blog", "target" : ".collection-type-blog #page", "showOnlyWhenPresent" : ".collection-type-blog:not(.meta-priority-author)" }
+
+// tweak: { "type" : "checkbox", "title" : "Hide List Entry Footer", "active" : true, "category" : "Blog", "target" : ".collection-type-blog #page", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+
+/* Summary Block */
+
+// tweak: { "category" : "Summary Block", "title" : "Summary Block Title Font", "label" : "Title Font", "type" : "font", "target" : ".summary-header-text, .summary-title", "showOnlyWhenPresent" : ".summary-title, .summary-title-link" }
+.summary-heading-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+// tweak: { "category" : "Summary Block", "title" : "Summary Block Title Color", "label" : "Title Color", "type" : "color", "target" : ".summary-header-text, .summary-title", "showOnlyWhenPresent" : ".summary-title, .summary-title-link" }
+@summaryHeadingColor: #666;
+
+// tweak: { "category" : "Summary Block", "type" : "color", "title" : "Overlay Summary Title Color", "label" : "Overlay Title Color", "target" : ".page-content.has-main-media .summary-title", "showOnlyWhenPresent" : ".index-section-wrapper .content.has-main-media .summary-title, .index-section-wrapper .content.has-main-media .summary-title-link" }
+@overlaySummaryTitleColor: #fff;
+
+
+/* PreFooter */
+
+// tweak: { "type" : "dropdown", "title" : "Pre Footer Content", "label" : "Content", "options" : [ "Custom", "Empty" ], "default" : "Empty", "category" : "PreFooter", "target" : "#preFooter" }
+
+// tweak: { "type" : "color", "title" : "Pre Footer Background", "label" : "Background Color", "category" : "PreFooter", "target" : "#preFooter", "showOnlyWhenPresent" : ".pre-footer-content-custom" }
+@preFooterBgColor: #f9b963;
+
+// tweak: { "type" : "color", "title" : "Pre Footer Heading Color", "label" : "Heading Color", "category" : "PreFooter", "target" : "#preFooter", "showOnlyWhenPresent" : ".pre-footer-content-custom" }
+@preFooterHeadingColor: #444;
+
+// tweak: { "type" : "color", "title" : "Pre Footer Text Color", "label" : "Text Color", "category" : "PreFooter", "target" : "#preFooter", "showOnlyWhenPresent" : ".pre-footer-content-custom" }
+@preFooterTextColor: #444;
+
+
+
+/* Footer */
+
+// tweak: { "type" : "color", "title" : "Footer Background", "label" : "Background Color", "category" : "Footer", "target" : "#footer" }
+@footerBgColor: #1b1b1b;
+
+// tweak: { "type" : "color", "title" : "Footer Heading Color", "label" : "Heading Color", "category" : "Footer", "target" : "#footer" }
+@footerHeadingColor: #fff;
+
+// tweak: { "type" : "color", "title" : "Footer Text Color", "label" : "Text Color", "category" : "Footer", "target" : "#footer" }
+@footerTextColor: #fff;
+
+// tweak: { "type" : "value", "title" : "Footer Text Size", "label" : "Text Size", "min" : 50, "max" : 100, "step" : 1, "category" : "Footer", "target" : "#footer" }
+@footerTextSize: 85%;
+
+// tweak: { "type" : "font", "title" : "Footer Nav Font", "label" : "Nav Font", "category" : "Footer", "target" : "#secondaryNavigation, #footer .back-to-top-nav", "showOnlyWhenPresent" : "#secondaryNavigation, #footer .back-to-top-nav" }
+.footer-nav-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+// tweak: { "type" : "color", "title" : "Footer Nav Link Color", "label" : "Nav Color", "category" : "Footer", "target" : "#secondaryNavigation, #footer .back-to-top-nav", "showOnlyWhenPresent" : "#secondaryNavigation, #footer .back-to-top-nav" }
+@footerNavLinkColor: #fff;
+
+// tweak: { "type" : "color", "title" : "Footer Nav Link (Active)", "label" : "Nav Active Color", "category" : "Footer", "target" : "#secondaryNavigation, #footer .back-to-top-nav", "showOnlyWhenPresent" : "#secondaryNavigation, #footer .back-to-top-nav" }
+@footerNavActiveColor: #ccc;
+
+// tweak: { "type" : "checkbox", "title" : "Hide Site Info", "active" : false, "category" : "Footer", "target" : "#siteInfo", "showOnlyWhenPresent" : "#siteInfo" }
+
+// tweak: { "type" : "font", "title" : "Site Info Font", "category" : "Footer", "target" : "#siteInfo", "showOnlyWhenPresent" : "body:not(.hide-site-info) #siteInfo" }
+.site-info-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+// tweak: { "type" : "color", "title" : "Site Info Color", "category" : "Footer", "target" : "#siteInfo", "showOnlyWhenPresent" : "body:not(.hide-site-info) #siteInfo" }
+@siteInfoColor: #ccc;
+
+
+/* CATEGORY NAVIGATION */
+
+// tweak: { "type" : "checkbox", "title" : "Show Blog Category Navigation", "label" : "Show Blog Category Navigation", "active" : false, "category" : "Category Navigation", "target" : ".collection-type-blog #categoryNav, .collection-type-blog li:not(.nav-section-label), .collection-type-blog .main-content", "showOnlyWhenPresent" : ".collection-type-blog" }
+
+// tweak: { "type" : "checkbox", "title" : "Show Category Navigation", "label" : "Show Products Category Navigation", "active" : true, "category" : "Category Navigation", "target" : ".collection-type-products #categoryNav, .collection-type-products .main-content, .collection-type-blog li:not(.nav-section-label)", "showOnlyWhenPresent" : ".collection-type-products" }
+
+// tweak: { "type" : "font", "title" : "Product Category Nav Link Font", "label" : "Category Nav Link Font", "category" : "Category Navigation", "target" : "li:not(.nav-section-label)", "showOnlyWhenPresent" : "#categoryNav" }
+.category-nav-font {
+  font-family: "Raleway", Arial, sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+// tweak: { "type" : "color", "title" : "Product Category Nav Link Color", "label" : "Category Nav Link Color", "category" : "Category Navigation", "target" : "li:not(.nav-section-label)", "showOnlyWhenPresent" : "#categoryNav" }
+@categoryNavColor: #777;
+
+// tweak: { "type" : "color", "title" : "Product Category Nav Link Active Color", "label" : "Category Nav Link (Active)", "category" : "Category Navigation", "target" : "li:not(.nav-section-label)", "showOnlyWhenPresent" : "#categoryNav" }
+@categoryNavActiveColor: #1b1b1b;
+
+
+/* Generic variables */
+
+@sitePadding: 34px;
+@mobilePadding: 20px;
+@pageWidth: 1080px;
+@pageWidthNarrow: 700px;
+@galleryHeight: 600px;
+
+

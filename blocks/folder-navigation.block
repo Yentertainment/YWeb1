@@ -1,0 +1,20 @@
+{.section items}<div id="folderNav" >
+  <input type="checkbox" name="folder-nav-toggle" id="folderNavToggle" class="folder-nav-toggle hidden" />
+  <label for="folderNavToggle" class="folder-nav-toggle-label" onclick></label>
+  <nav class="folder-nav" role="navigation">
+    <ul>
+    <li class="nav-section-label">{collection.title}</li>
+    {.repeated section @}
+
+      {.collection?}
+      <li class="{collection.typeLabel}-collection{.section active} active-link{.end}{.if collection.folder} folder{.end}{.if folderActive} active-link active-folder{.end}"><a href="{.section homepage}/{.or}{collection.fullUrl}{.end}">{collection.navigationTitle}</a></li>
+      {.end}
+
+      {.section externalLink}
+      <li class="external-link"><a href="{url}"{.section newWindow} target="_blank"{.end}>{title}</a></li>
+      {.end}
+
+    {.end}
+    </ul>
+  </nav>
+</div>{.end}

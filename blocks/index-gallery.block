@@ -1,0 +1,53 @@
+
+<div class="index-gallery">
+  <div class="gallery-wrapper ">
+
+    {.repeated section items}
+      <div class="slide-wrapper">
+        <div class="slide" data-slide-id="{id}" data-slide-url="{urlId}">
+
+          {.section clickthroughUrl}<a href="{@}" class="clickthrough-link"></a>{.end}
+
+          {.image?}
+            {@|image load-false}
+            {.if title || body}
+            <div class="slide-meta{.if title} has-title{.end}{.if body} has-body{.end} tmpl-loading" data-slide-id="{id}">
+              {.section clickthroughUrl}<a href="{@}" class="clickthrough-link"></a>{.end}
+              <div class="slide-meta-content">
+                {.section clickthroughUrl}<a href="{@}" class="clickthrough-link"></a>{.end}
+                {.section title}
+                  <p class="title">{@}</p>
+                {.end}
+                {.section body}
+                  <div class="description">
+                    {@}
+                  </div>
+                {.end}
+              </div>
+              <a class="hide-meta-toggle"></a>
+            </div>
+            {.end}
+          {.end}
+
+          {.video?}{@|video load-false}{.end}
+        </div>
+      </div>
+    {.end}
+
+  </div>
+
+  {.section items.1}
+  <span class="arrow previous-slide"></span>
+  <span class="arrow next-slide"></span>
+  {.end}
+
+  <div class="circles gallery-nav{.section items.1} multi-image{.end}">
+
+    {.repeated section items}
+      <span class="circle"></span>
+    {.end}
+
+  </div>
+
+</div>
+

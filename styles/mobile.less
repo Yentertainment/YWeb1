@@ -1,0 +1,495 @@
+
+/* Pacific MOBILE STYLES
+-------------------------------------------------*/
+
+@media only screen and (max-width: 1600px) {
+  #overlayNav #mobileNavWrapper nav div {
+    a,
+    label {
+      font-size: 48px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  #overlayNav #mobileNavWrapper nav div {
+    a,
+    label {
+      font-size: 40px;
+    }
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+
+	// kills the background color on tapped links
+	.touch-styles {
+		a,
+		label {
+			-webkit-tap-highlight-color: rgba(0,0,0,0) !important;
+			-moz-tap-highlight-color: rgba(0,0,0,0) !important;
+			tap-highlight-color: rgba(0,0,0,0) !important;
+		}
+	}
+
+  #overlayNav #mobileNavWrapper nav div {
+    a,
+    label {
+      font-size: 36px;
+    }
+  }
+
+	.sqs-block-horizontalrule hr { margin: @sitePadding 0; }
+
+	// Limit index gallery aspect ratio
+	.collection-type-index.design-slideshow {
+		&.slideshow-aspect-ratio-2401-cinema {
+			.index-gallery { padding-bottom: 56.25%; }
+		}
+	}
+
+}
+
+@media only screen and (max-width: 768px) {
+
+	#page {
+		padding: @sitePadding;
+	}
+
+	.collection-type-blog article header { margin-bottom: 1em; }
+
+	// Limit index gallery aspect ratio
+
+	.collection-type-index.design-slideshow {
+
+		&.slideshow-aspect-ratio-169-widescreen {
+			.index-gallery { padding-bottom: 75%; }
+		}
+		&.slideshow-aspect-ratio-2401-cinema {
+			.index-gallery { padding-bottom: 75%; }
+		}
+	}
+
+	/* MOBILE NAV */
+
+	// fixes checkbox hack for android < 4.1.2
+	body {
+		-webkit-animation: bugfix infinite 1s;
+	}
+	@-webkit-keyframes bugfix {
+		from { padding: 0; }
+		to { padding: 0; }
+	}
+
+	#header #headerNav {
+		display: none;
+	}
+
+	#header {
+		#logoWrapper,
+		#siteTitleWrapper {
+			display: inline-block;
+			width: auto;
+			height: auto;
+			max-width: 70%;
+			vertical-align: middle;
+			padding: 0;
+			.border-box;
+			#logoImage img {
+				max-height: 50px;
+				max-width: 100%;
+				width: auto;
+				height: auto;
+			}
+			#siteTitle,
+			#siteTitle a {
+				width: 100%;
+			}
+			#siteTitle a {
+				line-height: 1em;
+				white-space: nowrap;
+				position: relative;
+				top: -0.15em;
+			}
+		}
+	}
+
+	.pre-footer-inner,
+	.footer-inner {
+		text-align: center;
+		.socialaccountlinks-block .social-account-list,
+		.back-to-top {
+			text-align: center;
+			margin: auto;
+      margin-bottom: 1em;
+		}
+	}
+
+	// footer nav
+
+	.back-to-top-nav { display: block; }
+	.back-to-top {
+		display: inline-block;
+		a { display: block; padding: .75em 1em; }
+	}
+
+	#secondaryNavWrapper {
+		#secondaryNavigation {
+			div {
+				.border-box;
+				display: block;
+				a,
+				label {
+					display: block;
+					padding: 0.5em 0;
+				}
+			}
+			> div {
+				margin-right: 0%;
+			}
+		}
+	}
+
+	.site-phone,.site-email{
+		display:block;
+	}
+
+	.sqs-announcement-bar+#site>#siteWrapper>.custom-cart,
+	.custom-cart {
+		top: auto;
+		bottom: 0;
+	}
+
+	// Limit h1, h2, h3, gallery title text sizes
+
+	h1:not(.site-title):not(.page-title):not(.flyoutitem-title), .entry-title {
+		.max-font-size(@heading1-font-font-size,48px);
+		.max-letter-spacing(@heading1-font-letter-spacing,2px);
+	}
+
+  #siteWrapper .calendar-block .yui3-calendar-header h1 {
+    font-size: 20px !important;
+  }
+
+	.banner-thumbnail-wrapper h1.page-title {
+		.max-font-size(@page-title-font-font-size, 72px);
+		.max-letter-spacing(@page-title-font-letter-spacing,2px)
+	}
+	.banner-thumbnail-wrapper .page-description p {
+		.max-font-size(@page-description-font-font-size, 36px);
+		.max-letter-spacing(@page-description-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h1:not(.OT_title) {
+		.max-font-size(@overlayHeading1Size,72px);
+		.max-letter-spacing(@heading1-font-letter-spacing,2px);
+	}
+
+	h2:not(.OT_subtitle) {
+		.max-font-size(@heading2-font-font-size,36px);
+		.max-letter-spacing(@heading2-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h2:not(.OT_subtitle) {
+		.max-font-size(@overlayHeading2Size,36px);
+		.max-letter-spacing(@heading2-font-letter-spacing,2px);
+	}
+
+	h3 {
+		.max-font-size(@heading3-font-font-size,27px);
+		.max-letter-spacing(@heading3-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h3 {
+		.max-font-size(@overlayHeading3Size,27px);
+		.max-letter-spacing(@heading3-font-letter-spacing,2px);
+	}
+
+	.index-gallery {
+    .title {
+      .max-font-size(@gallery-title-font-font-size,72px);
+      .max-letter-spacing(@gallery-title-font-letter-spacing,2px);
+    }
+    .description p {
+      .max-font-size(@gallery-description-font-font-size,18px);
+      .max-letter-spacing(@gallery-description-font-letter-spacing,0px);
+      .max-line-height(@gallery-description-font-line-height,1.35em);
+    }
+  }
+
+}
+
+@media only screen and (max-device-height: 1024px) {
+
+  #overlayNav #mobileNavWrapper nav div {
+    a,
+    label {
+      font-size: 30px;
+    }
+  }
+
+  .index-section-wrapper .content:not(.gallery-content) {
+    padding: (@sitePadding * 2) @sitePadding;
+  }
+
+  .index-section-wrapper .content.has-main-media:not(.gallery-content) {
+    padding: (@sitePadding * 4) @sitePadding;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+
+	// collapse sqs layouts
+	@import 'sqs-grid-breaker';
+
+	#overlayNav #mobileNavWrapper nav div {
+    a,
+    label {
+      font-size: 24px;
+    }
+  }
+
+	#siteWrapper { overflow: hidden; }
+
+	#page,
+	.collection-type-products.show-product-item-nav #page {
+		padding: (@mobilePadding * 2) @mobilePadding;
+	}
+
+	.index-section-wrapper .content:not(.gallery-content) {
+		padding: (@mobilePadding * 2) @mobilePadding;
+	}
+
+	.index-section-wrapper .content.has-main-media:not(.gallery-content) {
+		padding-top: (@overlayPadding / 2);
+		padding-bottom: (@overlayPadding / 2);
+	}
+
+	#header {
+		padding: 0 @mobilePadding;
+	}
+
+	.header-inner {
+		padding: @mobilePadding 0;
+		display: block;
+	}
+
+	.banner-thumbnail-wrapper {
+		padding: 100px 0;
+	}
+
+	.sqs-block-horizontalrule hr { margin: initial; }
+
+	blockquote { padding: 0.5em @mobilePadding; }
+
+	.quote-block figure {
+		padding: @mobilePadding;
+	}
+
+	.view-list .filter-heading {
+		margin: 0 auto;
+		padding: 1em 1em 0;
+	}
+
+	.view-list {
+		.entry + .entry {
+			margin-top: (@mobilePadding * 3);
+		}
+	}
+
+	.footer-inner,
+	.pre-footer-inner .sqs-layout {
+		padding: @mobilePadding;
+	}
+
+	.pagination { margin-top: (@mobilePadding * 3); }
+	.pagination > div span { display: none; }
+
+	#productList .product {
+		margin-bottom: (@mobilePadding * 2);
+		.product-title {
+			margin-top: 0.5em;
+		}
+	}
+
+	.collection-type-index.design-slideshow {
+  	.index-gallery {
+	  	.circles {
+	  		margin: 10px 0px;
+	  		height: 9px;
+	  		width: auto;
+	  		left: 44px;
+	  		right: 44px;
+	  		line-height: 1;
+	  	}
+	  	.circles .circle {
+	  		width: 5px;
+	  		height: 5px;
+	  		vertical-align: middle;
+	  		margin: 0 6px;
+	  	}
+	  }
+	  &.gallery-text-toggle .index-gallery .slide-meta .hide-meta-toggle {
+	  	right: 10px;
+	  	bottom: 10px;
+	  	height: 18px;
+	  	font-size: 18px;
+	  	&:before {
+	  		font-size: 18px;
+				width: 18px;
+				height: 18px;
+				line-height: 18px;
+	  	}
+	  }
+	}
+
+  .collection-type-index.design-slideshow .index-gallery .slide-meta {
+  	.description { display: none; }
+  	&:not(.has-title).has-body {
+  		background: transparent;
+  		.hide-meta-toggle { display: none; }
+  	}
+  }
+
+  // Limit h1, h2, h3, gallery title text sizes
+
+	h1:not(.site-title):not(.page-title):not(.flyoutitem-title), .entry-title {
+		.max-font-size(@heading1-font-font-size,34px);
+		.max-letter-spacing(@heading1-font-letter-spacing,2px);
+	}
+
+	.banner-thumbnail-wrapper h1.page-title {
+		.max-font-size(@page-title-font-font-size, 34px);
+		.max-letter-spacing(@page-title-font-letter-spacing,2px)
+	}
+
+	.banner-thumbnail-wrapper .page-description p {
+		.max-font-size(@page-description-font-font-size, 20px);
+		.max-letter-spacing(@page-description-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h1:not(.OT_title) {
+		.max-font-size(@overlayHeading1Size,36px);
+		.max-letter-spacing(@heading1-font-letter-spacing,2px);
+	}
+
+	h2:not(.OT_subtitle) {
+		.max-font-size(@heading2-font-font-size,26px);
+		.max-letter-spacing(@heading2-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h2:not(.OT_subtitle) {
+		.max-font-size(@overlayHeading2Size,26px);
+		.max-letter-spacing(@heading2-font-letter-spacing,2px);
+	}
+
+	h3 {
+		.max-font-size(@heading3-font-font-size,20px);
+		.max-letter-spacing(@heading3-font-letter-spacing,2px);
+	}
+
+	.index-section-wrapper .content.has-main-media h3 {
+		.max-font-size(@overlayHeading3Size,20px);
+		.max-letter-spacing(@heading3-font-letter-spacing,2px);
+	}
+
+	.index-gallery {
+    .title {
+      .max-font-size(@gallery-title-font-font-size,30px);
+      .max-letter-spacing(@gallery-title-font-letter-spacing,2px);
+    }
+    .description p {
+      .max-font-size(@gallery-description-font-font-size,16px);
+      .max-letter-spacing(@gallery-description-font-letter-spacing,0px);
+      .max-line-height(@gallery-description-font-line-height,1.35em);
+    }
+  }
+
+  /* CATEGORY NAV MOBILE
+  ----------------------------------------------*/
+
+  .category-nav-toggle-label {
+    display: block;
+    visibility: visible;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0.5em;
+    right: 10px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 1.8em;
+    text-align: right;
+    &:after {
+      font-size: 20px;
+      content: "+";
+      display: block;
+      text-align: right;
+    }
+  }
+
+  #categoryNav {
+    margin-bottom: 25px;
+    position: relative;
+    padding: 0 10px;
+    background-color: rgba(150, 150, 150, 0.1);
+    ul {
+      text-align: left;
+      font-size: 14px;
+      margin: 0px 10% 0 0;
+      line-height: 1.8em;
+      li {
+        margin: 0;
+        padding-right: 0 !important;
+        display: none;
+        &.filter {
+          display: block;
+          visibility: visible;
+        }
+      }
+      li a {
+        display: block;
+        font-size: 14px;
+        padding: 0.5em 0;
+      }
+    }
+  }
+
+  .page-alignment-center #categoryNav,
+  .page-alignment-right #categoryNav {
+    ul {
+      text-align: left;
+      li {
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+  }
+
+  #categoryNav #categoryNavToggle:checked {
+    + .category-nav-toggle-label {
+      z-index: 0;
+      &:after {
+        content: '–';
+      }
+    }
+    ~ .category-nav {
+      ul {
+        z-index: 2;
+        li:not(.filter) {
+          display: block;
+        }
+      }
+    }
+  }
+
+}
+
+// why force full width spacer blocks on mobile?
+@media only screen and (max-width: 640px) {
+  .sqs-layout .sqs-col-12 > .spacer-block {
+    display: block;
+  }
+}
+
+

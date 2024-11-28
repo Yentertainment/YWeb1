@@ -1,0 +1,53 @@
+<section class="sqs-audio-playlist loading{.section metadata.albumCover} has-album-cover{.or} no-album-cover{.end}">
+  <header class="album-info">
+
+    <div class="album-cover-wrapper">
+
+      <div class="album-cover content-fill">
+        {.section metadata.albumCover}<img {@|image-meta} />{.end}
+      </div>
+
+      <div class="album-controls">
+        <a class="button" href="#"><span class="icon"></span></a>
+      </div>
+
+    </div>
+
+    {.section title}<h3 class="album-title">{@}</h3>{.end}
+    {.section metadata.artistName}<div class="album-artist-name">by <span>{@}</span></div>{.end}
+    {.section metadata.albumDescription}<div class="album-description">{@}</div>{.end}
+    <div class="engagement">{@|social-button-inline}</div>
+
+  </header>
+  <ul class="tracks">
+
+    {.repeated section items}
+      <li class="track" data-title="{title}" data-artist="{artistName}">
+
+        <div class="track-progress-bar">
+          <div class="bg bar"></div>
+          <div class="load-bar bar"></div>
+          <div class="play-bar bar">
+            <!-- <a href="#" class="scrubber"></a> -->
+          </div>
+        </div>
+
+        <div class="track-meta">
+          <div class="track-time">{lengthInMilliSeconds|humanizeDuration}</div>
+        </div>
+
+        <div class="track-info">
+          <div class="title"><a class="link" href="{assetUrl}">{title}</a></div>
+          <div class="artist">{artistName}</div>
+        </div>
+
+      </li>
+
+    {.or}
+
+      <div class="empty-message">This playlist is empty.</div>
+
+    {.end}
+
+  </ul>
+</section>

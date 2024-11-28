@@ -1,0 +1,3 @@
+<div class="pre-footer-inner with-custom">
+  <squarespace:block-field id="preFooterBlocks" columns="12" label="Pre-Footer Content" />
+</div>

@@ -1,0 +1,81 @@
+{.section items}<div id="mainNavWrapper" class="nav-wrapper desktop-nav-wrapper show-on-scroll">
+  <nav id="mainNavigation" data-content-field="navigation" >
+    {.repeated section @}
+      {.collection?}
+        {.index?}
+          {.if collection}
+            {.if collection.homepage}
+              {.repeated section items}
+                {.section collection}
+                  {.collectionTypeNameEquals? gallery}
+                  {.or}
+                  <div class="index home">
+                    <a href="/#{collection.urlId}-section">
+                      {navigationTitle}
+                    </a>
+                  </div>
+                  {.end}
+                {.end}
+              {.end}
+            {.end}
+            <div class="index{.if collection.homepage} base{.end}{.if active} active{.end}">
+              <a href="{collection.fullUrl}">
+                {collection.navigationTitle}
+              </a>
+            </div>
+          {.end}
+        {.or}
+
+        {.folder?}
+        <div class="folder{.if folderActive} active{.end}{.section collection}{.if homepage} homepage{.end}{.end}">
+          <input type="checkbox" name="folder-toggle-{collection.id}" id="folder-toggle-{collection.id}" class="folder-toggle-box hidden" />
+          <label for="folder-toggle-{collection.id}" class="folder-toggle-label" onclick data-href="{collection.fullUrl}">{collection.navigationTitle}</label>
+          <div class="subnav">
+          {.repeated section items}
+
+            {.collection?}
+            <div class="collection{.if active} active{.end}">
+              <a href="{collection.fullUrl}">
+                {collection.navigationTitle}
+              </a>
+            </div>
+            {.end}
+            {.section externalLink}
+            <div class="external">
+              <a href="{url}"{.section newWindow} target="_blank"{.end}>
+                {title}
+              </a>
+            </div>
+            {.end}
+          {.end}
+          </div>
+        </div>
+        {.or}
+
+          {.section collection}
+          <div class="collection{.if active} active{.end}{.if homepage} homepage{.end}">
+            <a href="{fullUrl}">
+              {navigationTitle}
+            </a>
+          </div>
+          {.end}
+
+        {.end}
+      {.end}
+      {.or}
+        {.section externalLink}
+        <div class="external">
+          <a href="{url}"{.section newWindow} target="_blank"{.end}>
+            {title}
+          </a>
+        </div>
+        {.end}
+
+      {.end}
+
+    {.end}
+  </nav>
+</div>
+<!-- style below blocks out the mobile nav toggle only when nav is loaded -->
+<style>.mobile-nav-toggle-label { display: inline-block; }</style>
+{.end}

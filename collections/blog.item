@@ -1,0 +1,114 @@
+<div class="blog-item">
+
+  {.section item}
+  <article class="entry h-entry {@|item-classes} clearfix" id="article-{id}" data-item-id="{id}">
+
+    <header class="entry-header">
+      <div class="meta-above-title">
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="{addedOn|date %F}" pubdate><a href="{fullUrl}" class="entry-dateline-link">{addedOn|date %B %e, %Y}</a></time>
+          <time class="dt-updated updated" datetime="{updatedOn|date %F}"></time>
+        </div>
+        {.section author}
+        <div class="entry-byline">
+          <span class="entry-author vcard"><a href="{collection.fullUrl}?author={author.id}" class="p-author author url fn entry-byline-link" rel="author">{displayName}</a></span>
+        </div>
+        {.end}
+        {.section categories}
+        <div class="entry-morefrom">
+          <span class="entry-category">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="entry-morefrom-link" rel="tag">{@}</a>{.alternates with}<span class="entry-morefrom-delimiter">, </span>{.end}</span>
+        </div>
+        {.end}
+      </div>
+      <h1 data-content-field="title" class="entry-title entry-title-item p-name">
+      {.passthrough?}
+        <a href="{sourceUrl}" class="entry-title-passthrough" target="_blank">{title}</a>
+      {.or}
+        <a href="{fullUrl}" class="u-url" rel="bookmark">{title}</a>
+      {.end}
+      </h1>
+      <div class="meta-below-title">
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="{addedOn|date %F}" pubdate><a href="{fullUrl}" class="entry-dateline-link">{addedOn|date %B %e, %Y}</a></time>
+          <time class="dt-updated updated" datetime="{updatedOn|date %F}"></time>
+        </div>
+        {.section author}
+        <div class="entry-byline">
+          <span class="entry-author vcard"><a href="{collection.fullUrl}?author={author.id}" class="p-author author url fn entry-byline-link" rel="author">{displayName}</a></span>
+        </div>
+        {.end}
+        {.section categories}
+        <div class="entry-morefrom">
+          <span class="entry-category">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="entry-morefrom-link" rel="tag">{@}</a>{.alternates with}<span class="entry-morefrom-delimiter">, </span>{.end}</span>
+        </div>
+        {.end}
+      </div>
+    </header>
+
+    <div class="entry-content e-content">
+      {.section body}
+        {@}
+      {.end}
+    </div>
+
+
+    <footer class="entry-footer clear">
+      <div class="meta-below-content">
+        {.section author}
+        <div class="entry-dateline">
+          <time class="dt-published published entry-date" datetime="{addedOn|date %F}" pubdate><a href="{fullUrl}" class="entry-dateline-link">{addedOn|date %B %e, %Y}</a></time>
+          {.if updatedOn}<time class="dt-updated updated" datetime="{updatedOn|date %F}"></time>{.end}
+        </div>
+        <div class="entry-byline">
+          <span class="entry-author"><a href="{collection.fullUrl}?author={author.id}" class="p-author author entry-byline-link" rel="author">{displayName}</a></span>
+        </div>
+        {.end}
+        {.section categories}
+        <div class="entry-morefrom">
+          <span class="entry-category">{.repeated section @}<a href="{collection.fullUrl}?category={@|url-encode}" class="entry-morefrom-link" rel="tag">{@}</a>{.alternates with}<span class="entry-morefrom-delimiter">, </span>{.end}</span>
+        </div>
+        {.end}
+      </div>
+      {.section sourceUrl}
+      <p class="entry-source">
+        Source: <a href="{sourceUrl}" target="_blank">{sourceUrl}</a>
+      </p>
+      {.end}
+      {.section tags}
+      <p class="entry-tags">
+        <span class="entry-tags-title">Tagged: </span>{.repeated section @}<a href="{collection.fullUrl}?tag={@|url-encode}" class="entry-tags-tag entry-tag-{@|slugify}" rel="tag">{@}</a>{.alternates with}<span class="entry-tags-delimiter">, </span>{.end}
+      </p>
+      {.end}
+      <div class="entry-actions">
+        {@|like-button}{@|social-button-inline}
+      </div>
+    </footer>
+
+    {.section author}
+      <div class="author-profile">
+        {.if avatarAssetUrl}<div class="author-profile-image"><img src="http://static.squarespace.com/static/w/gbl/{avatarId}/?format=300w" /></div>{.end}<div class="author-profile-content">
+          <h3 class="author-profile-name"><a href="{collection.fullUrl}?author={authorId}">{displayName}</a></h3>
+          {.section location}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}<p class="author-profile-location">{.end}{.if addressTitle}{addressTitle}{.end}{.if addressLine1}{.if addressTitle}, {.end}{addressLine1}{.end}{.if addressLine2}{.if addressTitle || addressLine1}, {.or}{.end}{addressLine2}{.end}{.if addressCountry}{.if addressTitle || addressLine1 || addressLine2}, {.end}{addressCountry}{.end}{.if addressTitle || addressLine1 || addressLine2 || addressCountry}</p>{.end}{.end}
+          <p class="author-profile-bio">{bio}</p>
+        </div>
+      </div>
+    {.end}
+
+    {.if postItemInjectCode}<div class="entry-injection">{postItemInjectCode}</div>{.end}
+
+  </article>
+
+  <div id="comments-{id}" class="p-comment">
+    {.comments?}{@|comments}{.end}
+  </div>
+
+  {.end}
+
+  {.if pagination}
+  <nav class="pagination clear">
+    {.if pagination.prevItem}<div class="newer"><a href="{pagination.prevItem.fullUrl}" rel="prev"><span>{pagination.prevItem.title}</span></a></div>{.end}
+    {.if pagination.nextItem}<div class="older"><a href="{pagination.nextItem.fullUrl}" rel="next"><span>{pagination.nextItem.title}</span></a></div>{.end}
+  </nav>
+  {.end}
+
+</div>
